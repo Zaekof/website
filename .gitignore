@@ -59,3 +59,19 @@ typings/
 
 # next.js build output
 .next
+
+
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+#dist
+
+# Idea project config
+.idea

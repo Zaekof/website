@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Overlay</title>
+
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js' type='text/javascript'></script>
+</head>
+<body>
+
+        <video id="entree_video" preload="auto" autoplay="false" loop="false" src="assets/videos/overlay01.mp4"></video>
+        <button id="btn_test">event test</button>
+
+        <script type = 'text/javascript'>
+            let onLoad = false;
+            let cpt_left = 0;
+
+            document.getElementById('entree_video').pause();
+            let btn = document.getElementById('btn_test');
+            const socketToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbiI6IjNCMTFGNTNFM0M4OUQ0RjAiLCJyZWFkX29ubHkiOnRydWUsInByZXZlbnRfbWFzdGVyIjp0cnVlLCJ0d2l0Y2hfaWQiOiI0MjE0MTI1MSJ9.3eBuTY2H-XMla8Ebb8rPdK1Bv2jNugl5AoRYPgmcRJU';
+            const streamlabs = io(`https://sockets.streamlabs.com?token=${socketToken}`, {transports: ['websocket']});
+
+            $(btn).click(function (){
+                console.log('test');
+                start();
+            });
+          
+            streamlabs.on('event', (eventData) => {
+                
+                // Donation
+                if (eventData.type === 'donation')
+                    start();
+    
+                if (eventData.for === 'twitch_account') {
+                    switch(eventData.type) {
+                        case 'bits':
+                            start();
+                            break;
+                        case 'subscription':
+                            start();
+                            break;
+                        default:
+                            //console.log('defaut', eventData.message); 
+                    }
+                }
+
+            });
+
+            function start() {
+                if (onLoad) {
+                    console.log('déjà en cours');
+                    cpt_left++;
+                } else if (!onLoad) {
+                    console.log('start');
+                    onLoad = true;
+
+                    document.getElementById('entree_video').play();
+                    setTimeout(function () {
+                        document.getElementById('entree_video').pause();
+                        document.getElementById('entree_video').currentTime = 0;
+
+                        if (cpt_left >= 1) {
+                            cpt_left--;
+                            console.log(cpt_left);
+                            onLoad = false;
+                            start();
+                        } else if (cpt_left <= 0) {
+                            onLoad = false;
+                        }
+                        console.log('clear');
+                    }, 20000);
+                }
+            }
+        </script>
+    
+</body>
+</html>

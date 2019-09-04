@@ -1,0 +1,38 @@
+{
+  "name": "loicnogier.fr",
+  "version": "2.0.1",
+  "description": "Freelance Web Developer, NodeJs/Wordpress/ExpressJs/Angular...",
+  "author": "pro.nogierloic@gmail.com",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "async-await": "^0.1.40",
+    "axios": "^0.18.0",
+    "bopen": "^2.3.3",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.11",
+    "nuxt": "^2.0.0",
+    "socket.io-client": "^2.2.0",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^8.0.1",
+    "tmi.js": "^1.4.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "css-loader": "^2.1.0",
+    "eslint": "^4.19.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "vue-loader": "^15.5.1"
+  }
+}
