@@ -70,7 +70,6 @@
 
 <script>
 export default {
-  name: 'index',
   transition: 'page'
 }
 </script>

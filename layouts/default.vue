@@ -16,9 +16,6 @@ export default {
     NavBar,
     SiteFooter
   },
-  mounted () {
-    this.$router.push({path: './home'});
-  }
 }
 </script>
 
