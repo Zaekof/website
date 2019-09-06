@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: loicnogier.fr
-Token: ab75f5f54d4f515d5332e53b41268ae52a828df8ec33ab2c274a976e78cc146f
