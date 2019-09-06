@@ -1,0 +1,95 @@
+.widget-AlertBox {
+position: relative;
+}
+body,
+html {
+height: 100%;
+width: 100%;
+overflow: hidden;
+font-family: Oswald;
+background: #ED008E !important;
+}
+
+#wrap {
+position: relative;
+height: 100%;
+width: 100%;
+}
+#alert-box {
+height: 100%;
+width: 100%;
+position: absolute;
+}
+#alert-box.hidden,
+.hidden {
+opacity: 0;
+}
+#alert-text {
+padding: 20px;
+text-shadow: 0px 0px 1px #000, 0px 0px 2px #000, 0px 0px 3px #000, 0px 0px 4px #000, 0px 0px 5px #000;
+}
+#alert-message,
+#alert-user-message {
+text-align: center;
+}
+#alert-user-message img {
+vertical-align: middle;
+height: 1em;
+}
+#alert-image video {
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+}
+#alert-message > span > span {
+display: inline-block;
+}
+#alert-image-wrap {
+z-index: 6;
+
+width: 100%;
+height: 100%;
+
+position: absolute;
+top: 0;
+left: 0;
+}
+#alert-image {
+z-index: 6;
+
+width: 50%;
+height: 330px;
+
+position: fixed;
+top: calc(-100% + 330px);
+left: 25%;
+}
+#alert-text {
+z-index: 6;
+position: relative;
+}
+#alert-text-wrap {
+z-index: 6;
+position: relative;
+}
+
+#alert-message {
+margin-top: -300px;
+text-shadow: 0px 0px 1px #000000, 0px 0px 2px #000000, 0px 0px 3px #000000, 0px 0px 4px #000000, 0px 0px 5px #000000;
+animation-name: pl_texte;
+animation-duration: 6.5s;
+opacity: 0;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+
+@keyframes pl_texte {
+0%, 80% {
+opacity: 1;
+}
+90%, 100% {
+opacity: 0;
+}
+}

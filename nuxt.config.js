@@ -1,85 +1,76 @@
-const glob = require('glob');
-let files = glob.sync( '**/*.md' , { cwd: 'articles' });
+const webpack = require('webpack');
 
-function getSlugs(post, _) {
-  let slug = post.substr(0, post.lastIndexOf('.'));
-  return `/blog/${slug}`;
-}
-export default {
-  mode: 'universal',
+module.exports = {
+  /*
+  ** Headers of the page
+  */
   head: {
-    title: 'loicnogier.fr - Self-Entrepreneur',
+    title: 'loicnogier.fr',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'keywords', content: 'developer web front end nogier loic développeur site français anglais english back end full stack html5 js css sass'},
-      { hid: 'description', name: 'description', content: 'Self-Entrepreneur in web and mobile development. Passionate and always ready to take on new challanges. I support you in all your web and mobile projects.' },
-      { lang: 'en' },
-      { author: 'loic nogier' }      
+      { hid: 'description', name: 'description', content: 'Auto-Entrepreneur en informatique spécialité développement web/mobile/logiciel. Passioné et toujours prêt pour relever de nouveaux challanges. Je vous accompagne dans tous vos projets web et mobiles.' },
+      { lang: 'fr' },
+      { author: 'loic nogier' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js",
-        type: "text/javascript"
-      },
-    ] 
+      { src: 'https://cdn.jsdelivr.net/npm/sweetalert2' },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js' },
+      { src: 'https://use.fontawesome.com/releases/v5.0.7/js/all.js' }
+    ]
   },
   /*
-  ** Customize the progress-bar color
+  ** Customize the progress bar color
   */
-  loading: { color: '#FF5733' },
-  /*
-  ** Global CSS
-  */
- css: ["assets/main.scss"],
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
-  /*
-  ** Nuxt.js modules
-  */
+  loading: { color: '#3B8070' },
   modules: [
-    // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma',
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/markdownit'
   ],
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
-  axios: {
-  },
-  generate: {
-    routes: function() {
-      return files.map(getSlugs)
-    }
+ 
+  // [optional] markdownit options
+  // See https://github.com/markdown-it/markdown-it
+  markdownit: {
+    preset: 'default',
+    injected: true,
+    linkify: true,
+    breaks: true,
+    use: [
+      'markdown-it-div',
+      'markdown-it-attrs'
+    ]
   },  
   /*
   ** Build configuration
-  */
+  */ 
   build: {
-    postcss: {
-      preset: {
-        features: {
-          customProperties: false
-        }
+    /*
+    ** Run ESLint on save
+    */
+    extend (config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
       }
     },
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-      config.module.rules.push({
-        test: /\.md$/,
-        use: ['raw-loader']
-      });
-    }
+    vendor: ['jquery', 'axios'],
+    plugins: [
+      new webpack.ProvidePlugin({
+        '$':              'jquery',
+        $:                'jquery',
+        jQuery:           'jquery',
+        'window.jQuery':  'jquery',
+        '_':              'lodash'
+      })
+    ]
   }
 }
+
