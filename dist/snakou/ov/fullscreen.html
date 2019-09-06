@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>topbar</title>
+
+  <style>
+    @font-face {
+      font-family: 'BOLD';
+      src: url('./assets/fonts/big_noodle_titling.ttf');
+    }
+    /* Reset */
+    html, body {
+      margin: 0; padding: 0;
+      background: transparent;
+      background-image: none;
+      font-family: BOLD;
+    }
+
+    ._center {
+      text-align: center;
+    }
+
+    .pl_content img {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 1920px;
+      height: 105px;
+    }
+    /* cptSubs */
+
+    .pl_aside img {
+      position: absolute;
+      top: 0%;
+      left: -300px;
+      /*left: 0;*/
+      width: auto;
+      height: auto;
+      transition: 3s;
+
+    }
+
+    .pl_aside p {
+      position: absolute;
+      color: rgb(252, 252, 252);
+      top: -5px;
+      /*left: 75px;*/
+      width: 135px;
+
+      left: -225px;
+      text-align: center;
+      font-size: 37px;
+      font-family: BOLD;
+      transition: 3s;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pl_body">
+    <div class="pl_content">
+      <img src="./assets/fullscreen/full.png" alt="image">
+      <aside class="pl_aside">
+        <img id="ANIMATION_img" src="./assets/fullscreen/cptsubs.png" alt="image">
+        <p id="ANIMATION_p" class="txt"><span id="amount">1700</span>/<span id="amoutEnds">1701</span></p>
+      </aside>
+    </div>
+  </div>
+  
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/socket.io.js"></script>
+  <script src="./assets/js/tmi.min.js"></script>
+  <script src="./assets/js/topbar.js"></script>
+</body>
+</html>
