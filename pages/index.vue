@@ -1,17 +1,17 @@
 <template>
   <div class="container">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          NOGIER Loïc
-        </h1>
-        <h2 class="subtitle">
-          21 years old French Web Developer on Freelance.
-        </h2>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            NOGIER Loïc
+          </h1>
+          <h2 class="subtitle">
+            21 years old French Web Developer on Freelance.
+          </h2>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
     <div class="tile is-ancestor">
       <div class="tile is-vertical is-8">
         <div class="tile">

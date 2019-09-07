@@ -13,14 +13,23 @@ html {
   overflow: auto !important;
 
   body {
-    min-height: 100vh;
-
     background: #FAFAFA;
     .navbar {
       margin-bottom: 50px;
     }
+    footer.footer {
+      height: 20px !important;
+    }
+    .tile {
+      width: 100%;
+    }   
   }
 }
+@media screen and (max-width: 400px) {
+  .tile {
+    width: 100vw !important;
+  }
+} 
 .page-enter-active, .page-leave-active {
   transition: opacity .5s;
 }
