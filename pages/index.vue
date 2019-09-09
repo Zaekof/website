@@ -24,7 +24,7 @@
             </article>
             <article class="tile is-child notification is-warning">
               <p class="title">
-                <a href="https://github.com/Zaekof/Twitch-StrawPoll" target="_blank" rel="noopener noreferrer">Twitch StrawPoll Overlay</a>
+                <nuxt-link to="/blog/strawpoll">Twitch StrawPoll</nuxt-link>
               </p>
               <p class="subtitle">Simple StrawPoll Overlay for Twitch, Made entirely in javascript.</p>
             </article>
