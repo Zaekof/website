@@ -86,10 +86,12 @@ const ft_twitch = function () {
   client.connect();      
 }
 
+ft_twitch();
+ft_loop();
 
 /**
  * Just for event test
- */
+
 document.addEventListener('keyup', (event) => {
   if (event.isComposing || event.keyCode === 229) {
       return;
@@ -97,4 +99,4 @@ document.addEventListener('keyup', (event) => {
   if (event.keyCode === 83) {
     ft_animated()
   }
-});
+});*/
