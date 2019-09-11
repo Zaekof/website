@@ -13,11 +13,13 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/bulma": "^1.2.1",
+    "flag-icon-css": "^3.3.0",
     "glob": "^7.1.4",
     "nuxt": "^2.0.0",
     "tmi.js": "^1.4.5"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2",
     "@nuxtjs/markdownit": "^1.2.6",
     "@nuxtjs/style-resources": "^1.0.0",
     "bulma": "^0.7.5",
