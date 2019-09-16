@@ -196,33 +196,33 @@ function pl_pick() {
     if (SubsPick == "subs 0subs") {
         PickGrade = "subs";
         PickSubs = "0subs";
-        $("#winerUsername").html("<img src='img/0subs.png' />"+UserValid[pl_number]+"");
+        $("#winerUsername").html("<img src='./app/img/0subs.png' />"+UserValid[pl_number]+"");
     } else if (SubsPick == "subs 3subs") {
         PickGrade = "subs";
         PickSubs = "3subs";
-        $("#winerUsername").html("<img src='img/3subs.png' />"+UserValid[pl_number]+"");
+        $("#winerUsername").html("<img src='./app/img/3subs.png' />"+UserValid[pl_number]+"");
     } else if (SubsPick == "subs 6subs") {
         PickGrade = "subs";
         PickSubs = "6subs";
-        $("#winerUsername").html("<img src='img/6subs.png' />"+UserValid[pl_number]+"");
+        $("#winerUsername").html("<img src='./app/img/6subs.png' />"+UserValid[pl_number]+"");
     } else if (SubsPick == "subs 12subs") {
         PickGrade = "subs";
         PickSubs = "12subs";
-        $("#winerUsername").html("<img src='img/12subs.png' />"+UserValid[pl_number]+"");
+        $("#winerUsername").html("<img src='./app/img/12subs.png' />"+UserValid[pl_number]+"");
     } else if (SubsPick == "subs 26subs") {
         PickGrade = "subs";
         PickSubs = "24subs";
-        $("#winerUsername").html("<img src='img/24subs.png' />"+UserValid[pl_number]+"");
+        $("#winerUsername").html("<img src='./app/img/24subs.png' />"+UserValid[pl_number]+"");
     } else if (SubsPick == "follow 0subs") {
         PickGrade = "follow";
         PickSubs = "0subs";
-        $("#winerUsername").html("<img src='img/follow.png' />"+UserValid[pl_number]+"");
+        $("#winerUsername").html("<img src='./app/img/follow.png' />"+UserValid[pl_number]+"");
     } else if (SubsPick == "modo 0subs") {
         PickGrade = "modo";
         PickSubs = "0subs";
-        $("#winerUsername").html("<img src='img/mod.png' />"+UserValid[pl_number]+"");
+        $("#winerUsername").html("<img src='./app/img/mod.png' />"+UserValid[pl_number]+"");
     } else {
-        $("#winerUsername").html("<img src='img/follow.png' />"+UserValid[pl_number]+"");
+        $("#winerUsername").html("<img src='./app/img/follow.png' />"+UserValid[pl_number]+"");
     }
 
     WinerUsername = UserValid[pl_number];
