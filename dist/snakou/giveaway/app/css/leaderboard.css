@@ -11,9 +11,19 @@ html {
     margin: 0;
 }
 
+@font-face {
+    font-family: 'BigNooble';
+    src: url('../font/big_noodle_titling.ttf');
+}
+
+@font-face {
+    font-family: 'BigNoobleOblique';
+    src: url('../font/big_noodle_titling_oblique.ttf');
+}
+
 body {
     margin: 0;
-    background-color: #EFEEF1;
+    background-color: transparent;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -33,15 +43,7 @@ body {
 }
 
 
-@font-face {
-    font-family: 'BigNooble';
-    src: url('../font/big_noodle_titling.ttf');
-}
 
-@font-face {
-    font-family: 'BigNoobleOblique';
-    src: url('../font/big_noodle_titling_oblique.ttf');
-}
 
 .pl_content > #statut_overlay {
     background-color: rgba(0, 0, 0, 0.2);
