@@ -19,6 +19,7 @@ const ft_loop = function () {
   }, 7000);
 }
 const ft_sync = function () {
+  console.log('ft_sync');
   $.ajax({
     type: 'GET',
     url: `https://api.twitch.tv/kraken/channels/mastersnakou/subscriptions?limit=1`,
@@ -28,6 +29,7 @@ const ft_sync = function () {
     },
     dataType: "json"
   }).done(function (result) {
+    console.log('done');
     let amountText = document.getElementById('amount');
     let amountEnd = document.getElementById('amoutEnds');
     if (typeof result["_total"] !== "undefined") {
@@ -88,3 +90,15 @@ const ft_twitch = function () {
 
 ft_twitch();
 ft_loop();
+
+/**
+ * Just for event test
+ */
+document.addEventListener('keyup', (event) => {
+  if (event.isComposing || event.keyCode === 229) {
+      return;
+  }
+  if (event.keyCode === 83) {
+    ft_animated();
+  }
+});

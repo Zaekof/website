@@ -1,0 +1,23 @@
+*, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+.container article {
+  margin: 20px;
+}
+.container #rog {
+  width: 70px;
+  height: auto;
+
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#rog img {
+  width: 100%;
+}
+
+.container #rog.fade {
+  opacity: 0;
+}

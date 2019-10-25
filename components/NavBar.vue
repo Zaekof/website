@@ -22,7 +22,7 @@
         </div>
       </div>
       <a class="navbar-item" target="_blank" href="https://twitter.com/zaekof">Twitter</a>
-      <a class="navbar-item" target="_blank" href="https://github.com/zaekof">GitHub</a>
+      <a class="navbar-item" target="_blank" href="https://github.com/loicngr">GitHub</a>
     </div>
   </div>
 </nav>

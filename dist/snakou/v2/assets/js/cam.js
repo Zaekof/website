@@ -54,16 +54,51 @@ const fn_loop = function () {
     fn_sync()
   }, 7000)
 }
-const fn_sync = function () {
+const fn_sync = async function () {
+  try {
+    const response = await fetch('https://api.twitch.tv/kraken/users/42141251/subscriptions/42141251', {
+      headers: {
+        'Content-Type': 'application/json',
+        "Client-ID": '1low3gl5nz7ep5o6qgj0xtrpd96mszn',
+        "Authorization": 'OAuth rppklngtx28u44vmu3qt80e8yjk5zn',
+        'Accept': 'application/vnd.twitchtv.v5+json'
+      },
+      method: "GET",
+    });
+    if (response.ok) {
+      const jsonData = await response.json();
+      console.log(jsonData);
+/**
+    let amountText = document.getElementById('amount')
+    let amountEnd = document.getElementById('amoutEnds')
+    if (typeof result["_total"] !== "undefined") {
+
+        data.subCount = parseInt(result["_total"])
+        $(amountText).text(data.subCount)
+        data.AmountEnd = data.subCount + 1
+        $(amountEnd).text(data.AmountEnd)
+  
+    }
+ */
+    } else {
+      console.error('server response : ' + response.status);
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+const fn_syncf = function () {
+  console.log('fn_sync');
   $.ajax({
+    url: 'https://api.twitch.tv/kraken/users/42141251/subscriptions/42141251',
     type: 'GET',
-    url: `https://api.twitch.tv/kraken/channels/mastersnakou/subscriptions?limit=1`,
     headers: {
       "Client-ID": '1low3gl5nz7ep5o6qgj0xtrpd96mszn',
-      "Authorization": 'OAuth rppklngtx28u44vmu3qt80e8yjk5zn'
+      "Authorization": 'OAuth rppklngtx28u44vmu3qt80e8yjk5zn',
+      'Accept:': 'application/vnd.twitchtv.v5+json'
     },
-    dataType: "json"
   }).done(function (result) {
+    console.log(result);
     let amountText = document.getElementById('amount')
     let amountEnd = document.getElementById('amoutEnds')
     if (typeof result["_total"] !== "undefined") {
