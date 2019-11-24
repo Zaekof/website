@@ -4,7 +4,11 @@
       <div class="columns is-centered">
         <div class="blog column is-10-tablet">
           <div class="title">{{ attributes.title }}</div>
-          <div class="subtitle">
+          <div class="subtitle" v-if="!flags.fr.status">
+            Publié le {{attributes.ctime}}
+            par {{ attributes.author }}
+          </div>
+          <div class="subtitle" v-else-if="!flags.en.status">
             Published on {{attributes.ctime}}
             by {{ attributes.author }}
           </div>
@@ -65,7 +69,7 @@ export default {
           status: false,
           link: ''
         }
-      }      
+      }
     }
   },
   methods: {

@@ -16,17 +16,11 @@ export default {
       { name: 'keywords', content: 'developer web front end nogier loic développeur site français anglais english back end full stack html5 js css sass'},
       { hid: 'description', name: 'description', content: 'Self-Entrepreneur in web and mobile development. Passionate and always ready to take on new challanges. I support you in all your web and mobile projects.' },
       { lang: 'en' },
-      { author: 'loic nogier' }      
+      { author: 'loic nogier' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
-    script: [
-      {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js",
-        type: "text/javascript"
-      },
-    ] 
+    ]
   },
   /*
   ** Customize the progress-bar color
@@ -64,7 +58,7 @@ export default {
     routes: function() {
       return files.map(getSlugs)
     }
-  },  
+  },
   /*
   ** Build configuration
   */
@@ -84,6 +78,6 @@ export default {
         test: /\.md$/,
         use: ['raw-loader']
       });
-    },   
+    },
   }
 }

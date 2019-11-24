@@ -7,7 +7,7 @@
             NOGIER Loïc
           </h1>
           <h2 class="subtitle">
-            21 years old French Web Developer on Freelance.
+            22 years old French Web Developer on Freelance.
           </h2>
         </div>
       </div>
