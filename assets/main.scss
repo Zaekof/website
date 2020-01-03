@@ -11,9 +11,10 @@
 
 html {
   overflow: auto !important;
+  background-color: transparent !important;
 
   body {
-    background: #FAFAFA;
+    background-color: #FAFAFA;
     .navbar {
       margin-bottom: 50px;
     }
@@ -22,14 +23,14 @@ html {
     }
     .tile {
       width: 100%;
-    }   
+    }
   }
 }
 @media screen and (max-width: 400px) {
   .tile {
     width: 100vw !important;
   }
-} 
+}
 .page-enter-active, .page-leave-active {
   transition: opacity .5s;
 }

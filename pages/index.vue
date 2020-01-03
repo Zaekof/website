@@ -24,9 +24,9 @@
             </article>
             <article class="tile is-child notification is-warning">
               <p class="title">
-                <nuxt-link to="/blog/strawpoll">Twitch StrawPoll</nuxt-link>
+                <nuxt-link to="/blog/mastersnakou_twitch_overlay">Snakou Twitch Overlay</nuxt-link>
               </p>
-              <p class="subtitle">Simple StrawPoll Overlay for Twitch, Made entirely in javascript.</p>
+              <p class="subtitle">Twitch Overlay for MasterSnakou, Made entirely in javascript.</p>
             </article>
           </div>
           <div class="tile is-parent">

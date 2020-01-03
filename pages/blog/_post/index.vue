@@ -4,11 +4,11 @@
       <div class="columns is-centered">
         <div class="blog column is-10-tablet">
           <div class="title">{{ attributes.title }}</div>
-          <div class="subtitle" v-if="!flags.fr.status">
+          <div class="subtitle" v-if="!flags.fr.status && flags.en.status">
             Publié le {{attributes.ctime}}
             par {{ attributes.author }}
           </div>
-          <div class="subtitle" v-else-if="!flags.en.status">
+          <div class="subtitle" v-if="!flags.en.status">
             Published on {{attributes.ctime}}
             by {{ attributes.author }}
           </div>

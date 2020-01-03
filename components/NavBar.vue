@@ -19,6 +19,7 @@
           <nuxt-link class="navbar-item" to="/blog/multitwitch">Multi Twitch</nuxt-link>
           <nuxt-link class="navbar-item" to="/blog/strawpoll">Twitch StrawPoll</nuxt-link>
           <nuxt-link class="navbar-item" to="/blog/paranoi4k_overlay">Overlay for Paranoi4k</nuxt-link>
+          <nuxt-link class="navbar-item" to="/blog/mastersnakou_twitch_overlay">Overlay for MasterSnakou</nuxt-link>
         </div>
       </div>
       <a class="navbar-item" target="_blank" href="https://twitter.com/zaekof">Twitter</a>
