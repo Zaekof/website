@@ -1,6 +1,6 @@
 {
-  "name": "loicnogier.fr",
-  "version": "2.0.0",
+  "name": "loicnogier",
+  "version": "3.0.0",
   "description": "Freelance Web Developer, NodeJs/Wordpress/ExpressJs/Angular...",
   "author": "loicngr",
   "private": true,
@@ -8,26 +8,30 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "test": "jest"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/bulma": "^1.2.1",
-    "@nuxtjs/pwa": "^3.0.0-beta.19",
-    "flag-icon-css": "^3.3.0",
-    "glob": "^7.1.4",
-    "nuxt": "^2.0.0",
-    "tmi.js": "^1.4.5"
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.2",
-    "@nuxtjs/markdownit": "^1.2.6",
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "@nuxtjs/markdownit": "^1.2.7",
     "@nuxtjs/style-resources": "^1.0.0",
-    "bulma": "^0.7.5",
-    "frontmatter-markdown-loader": "^2.0.0",
-    "node-sass": "^4.12.0",
-    "nodemon": "^1.18.9",
-    "raw-loader": "^3.1.0",
-    "sass-loader": "^8.0.0"
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-jest": "^24.1.0",
+    "bulma": "^0.8.0",
+    "flag-icon-css": "^3.4.5",
+    "frontmatter-markdown-loader": "^3.1.0",
+    "glob": "^7.1.6",
+    "jest": "^24.1.0",
+    "node-sass": "^4.13.1",
+    "raw-loader": "^4.0.0",
+    "sass-loader": "^8.0.2",
+    "vue-jest": "^4.0.0-0"
   }
 }

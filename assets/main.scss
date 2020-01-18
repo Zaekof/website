@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 *, *::after {
-  box-sizing: content-box;
   margin: 0;
   padding: 0;
 
@@ -12,32 +11,31 @@
 html {
   overflow: auto !important;
   background-color: transparent !important;
+}
 
-  body {
-    background-color: #FAFAFA;
-    .navbar {
-      margin-bottom: 50px;
-    }
-    footer.footer {
-      height: 20px !important;
-    }
-    .tile {
-      width: 100%;
-    }
+body {
+  background-color: #FAFAFA;
+
+  .navbar {
+    margin-bottom: 50px;
+  }
+  footer.footer {
+    height: 20px !important;
+  }
+  .tile {
+    width: auto;
   }
 }
+
 @media screen and (max-width: 400px) {
   .tile {
     width: 100vw !important;
   }
 }
+
 .page-enter-active, .page-leave-active {
   transition: opacity .5s;
 }
 .page-enter, .page-leave-to {
   opacity: 0;
-}
-article p:nth-child(2).subtitle {
-  padding-top: 0 !important;
-  margin-top: 20px !important;
 }
