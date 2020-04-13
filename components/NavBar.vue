@@ -22,7 +22,7 @@
           <nuxt-link class="navbar-item" to="/blog/mastersnakou_twitch_overlay">Overlay for MasterSnakou</nuxt-link>
         </div>
       </div>
-      <a class="navbar-item" target="_blank" href="https://twitter.com/zaekof">Twitter</a>
+      <!--<a class="navbar-item" target="_blank" href="https://twitter.com/zaekof">Twitter</a>-->
       <a class="navbar-item" target="_blank" href="https://github.com/loicngr">GitHub</a>
       <a class="navbar-item" target="_blank" href="https://gitlab.com/loicngr">GitLab</a>
     </div>
