@@ -2,40 +2,43 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 *, *::after {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  font-family: 'Montserrat', 'Tahoma';
+    font-family: 'Montserrat', 'Tahoma';
 }
 
 html {
-  overflow: auto !important;
-  background-color: transparent !important;
+    overflow: auto !important;
+    background-color: transparent !important;
 }
 
 body {
-  background-color: #FAFAFA;
+    background-color: #FAFAFA;
 
-  .navbar {
-    margin-bottom: 50px;
-  }
-  footer.footer {
-    height: 20px !important;
-  }
-  .tile {
-    width: auto;
-  }
+    .navbar {
+        margin-bottom: 50px;
+    }
+
+    footer.footer {
+        height: 20px !important;
+    }
+
+    .tile {
+        width: auto;
+    }
 }
 
 @media screen and (max-width: 400px) {
-  .tile {
-    width: 100vw !important;
-  }
+    .tile {
+        width: 100vw !important;
+    }
 }
 
 .page-enter-active, .page-leave-active {
-  transition: opacity .5s;
+    transition: opacity .5s;
 }
+
 .page-enter, .page-leave-to {
-  opacity: 0;
+    opacity: 0;
 }

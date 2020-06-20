@@ -1,36 +1,33 @@
 {
-  "name": "loicnogier",
-  "version": "3.0.0",
-  "description": "Freelance Web Developer, NodeJs/Wordpress/ExpressJs/Angular...",
-  "author": "loicngr",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "test": "jest"
-  },
-  "dependencies": {
-    "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/bulma": "^1.2.1",
-    "@nuxtjs/dotenv": "^1.4.0",
-    "@nuxtjs/pwa": "^3.0.0-0",
-    "nuxt": "^2.0.0"
-  },
-  "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.0",
-    "@nuxtjs/markdownit": "^1.2.7",
-    "@nuxtjs/style-resources": "^1.0.0",
-    "@vue/test-utils": "^1.0.0-beta.27",
-    "babel-jest": "^24.1.0",
-    "bulma": "^0.8.0",
-    "flag-icon-css": "^3.4.5",
-    "frontmatter-markdown-loader": "^3.1.0",
-    "glob": "^7.1.6",
-    "jest": "^24.1.0",
-    "node-sass": "^4.13.1",
-    "raw-loader": "^4.0.0",
-    "sass-loader": "^8.0.2"
-  }
+    "name": "loicnogier",
+    "version": "3.0.1",
+    "description": "Freelance Web Developer, NodeJs/Wordpress/ExpressJs/Angular...",
+    "author": "loicngr",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt --hostname localhost --port 3333",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate"
+    },
+    "dependencies": {
+        "@nuxtjs/axios": "^5.3.6",
+        "@nuxtjs/bulma": "^1.2.1",
+        "@nuxtjs/dotenv": "^1.4.0",
+        "@nuxtjs/pwa": "^3.0.0-0",
+        "nuxt": "^2.0.0"
+    },
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.12.0",
+        "@nuxtjs/markdownit": "^1.2.7",
+        "@nuxtjs/style-resources": "^1.0.0",
+        "@vue/test-utils": "^1.0.0-beta.27",
+        "bulma": "^0.8.0",
+        "flag-icon-css": "^3.4.5",
+        "frontmatter-markdown-loader": "^3.1.0",
+        "glob": "^7.1.6",
+        "node-sass": "^4.13.1",
+        "raw-loader": "^4.0.0",
+        "sass-loader": "^8.0.2"
+    }
 }
